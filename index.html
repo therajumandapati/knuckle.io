@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>We are Knuckle</title>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:300,700' rel='stylesheet' type='text/css'>
+	<style>
+		html, body {
+			width: 100%;
+			height: 100%;
+			font-family: 'Roboto', sans-serif;
+			font-size: 80px;
+			margin: 0px;
+		}
+
+		.knuckle-container {
+			display: table;
+			text-align: center;
+			width: 100%;
+			height: 100%;
+			margin-top: -20px;
+		}
+
+		.knuckle-container h3 {
+			display: table-cell;
+			vertical-align: middle;
+			line-height: normal;
+			font-weight: 300;
+			text-transform: uppercase;
+			margin: 0px;
+		}
+
+		.ticker {
+			font-weight: 700 !important;
+		}
+	</style>
+</head>
+<body>
+	<div class="knuckle-container">
+		<h3>We <span class="ticker">are knuckle</span></h3>
+	</div>
+
+	<script type="text/javascript">
+	var index = 0;
+	var messages = [
+		'change the world',
+		'rethink possibilities',
+		'challenge assumptions',
+		'break ground rules',
+		'are knuckle'
+	];
+
+	setInterval(function() {
+		var ticker = document.getElementsByClassName('ticker')[0];
+		ticker.innerHTML = messages[index];
+		index += 1;
+		if(index === messages.length) {
+			index = 0;
+		}
+	}, 2000);
+
+	</script>
+</body>
+</html>
